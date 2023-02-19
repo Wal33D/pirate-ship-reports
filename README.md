@@ -112,7 +112,7 @@ const psReports = new PirateShipReports(cookies, false);
 ### Get All Your Labels!
 ```javascript 
     //['All', 'Payment', 'Label', 'Refund', 'Carrier Adjustment']
-	let selection = 'Label'
+let selection = 'Label'
     const reports = await psReports.searchByTransactionType(selection);
     console.log(`${selection} Reports:`, reports);
 
