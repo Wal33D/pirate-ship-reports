@@ -55,8 +55,8 @@ const psReports = new PirateShipReports(cookies, false);
 ```javascript 
   const reports = await psReports.getAllReports(); 
   console.log("Reports:", reports); 
-
-Output:
+````
+```Output
  Reports: [ { 
   	id: '605648772', 
   	payment_id: '0', 
@@ -80,9 +80,9 @@ Output:
 
   const reports = await psReports.getReportsSorted(sortBy, order); 
   console.log(`Sorted reports by ${sortBy} (${order}):`, reports); 
+````
 
-
-Output: 
+```output 
  Sorted reports by created_at (asc): [ { 
   	id: '605647327', 
   	payment_id: '169723812', 
@@ -108,4 +108,41 @@ Output:
   	balance: '8.08', 
  	href: 'https://ship.pirateship.com/ship/shipment?id=322251484' 
 }, ... ] 
+```
+##Get All Your Labels!
+```javascript 
+    //['All', 'Payment', 'Label', 'Refund', 'Carrier Adjustment']
+	let selection = 'Label'
+    const reports = await psReports.searchByTransactionType(selection);
+    console.log(`${selection} Reports:`, reports);
+
+```
+##Output: 
+```output
+
+ [{ 
+  	id: '605347327', 
+  	payment_id: '169712812', 
+  	shipment_id: '0', 
+  	reconciliation_run_id: '0', 
+ 	batch_id: '246471367', 
+    created_at: '2023-02-13 15:56:52', 
+    transaction_type: 'Label', 
+  	title: 'Label for XXXX', 
+  	amount: '8.08', 
+  	balance: '0.00', 
+  	href: 'https://ship.pirateship.com/reports/receipt?id=169723812' 
+}, { 
+ 	id: '605647640', 
+ 	payment_id: '0', 
+  	shipment_id: '322215484', 
+  	reconciliation_run_id: '0', 
+ 	batch_id: '246471367', 
+ 	created_at: '2023-02-13 15:57:09', 
+  	transaction_type: 'Label', 
+  	title: 'Label for XXXX', 
+ 	amount: '18.08', 
+  	balance: '0.00', 
+ 	href: 'https://ship.pirateship.com/ship/shipment?id=322251484' 
+}, ...] 
 ```
