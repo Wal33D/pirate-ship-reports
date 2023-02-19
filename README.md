@@ -73,7 +73,6 @@ const psReports = new PirateShipReports(cookies, false);
 ```
 
 ### Get Reports Sorted by Field 
-
 ```javascript 
   const sortBy = "created_at"; //can be any field of the reports json element
   const order = "asc"; //default if left blank
@@ -81,7 +80,6 @@ const psReports = new PirateShipReports(cookies, false);
   const reports = await psReports.getReportsSorted(sortBy, order); 
   console.log(`Sorted reports by ${sortBy} (${order}):`, reports); 
 ````
-
 ```output 
  Sorted reports by created_at (asc): [ { 
   	id: '605647327', 
