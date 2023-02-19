@@ -51,7 +51,6 @@ const psReports = new PirateShipReports(cookies, false);
 ```
 
 ### Get All Reports 
-
 ```javascript 
   const reports = await psReports.getAllReports(); 
   console.log("Reports:", reports); 
