@@ -109,7 +109,7 @@ const psReports = new PirateShipReports(cookies, false);
  	href: 'https://ship.pirateship.com/ship/shipment?id=322251484' 
 }, ... ] 
 ```
-##Get All Your Labels!
+### Get All Your Labels!
 ```javascript 
     //['All', 'Payment', 'Label', 'Refund', 'Carrier Adjustment']
 	let selection = 'Label'
@@ -117,7 +117,6 @@ const psReports = new PirateShipReports(cookies, false);
     console.log(`${selection} Reports:`, reports);
 
 ```
-##Output: 
 ```output
 
  [{ 
