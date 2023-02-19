@@ -34,7 +34,7 @@ Copy code
 const PirateShipReports = require('pirateship-reports'); 
 const psReports = new PirateShipReports(cookies, false); 
 
-	cookies variable = JSON.parse([{ 
+	  cookies = JSON.parse([{ 
 			"domain": "ship.pirateship.com", 
 			"expirationDate": 1676695947.306691, 
 			"hostOnly": true, 
@@ -58,17 +58,17 @@ const psReports = new PirateShipReports(cookies, false);
 
 Output:
  Reports: [ { 
-  		id: '605648772', 
-  		payment_id: '0', 
-  		shipment_id: '322252063', 
-  		reconciliation_run_id: '0', 
- 		batch_id: '246471883', 
-  		created_at: '2023-02-13 15:58:07', 
- 		transaction_type: 'Label', 
- 		title: 'Jason S: 1 Label Batch', 
-  		amount: '-8.08', 
-  		balance: '0.00', 
- 		href: 'https://ship.pirateship.com/ship/batch?id=246471883' 
+  	id: '605648772', 
+  	payment_id: '0', 
+  	shipment_id: '322252063', 
+  	reconciliation_run_id: '0', 
+ 	batch_id: '246471883', 
+  	created_at: '2023-02-13 15:58:07', 
+ 	transaction_type: 'Label', 
+ 	title: 'Jason S: 1 Label Batch', 
+  	amount: '-8.08', 
+  	balance: '0.00', 
+ 	href: 'https://ship.pirateship.com/ship/batch?id=246471883' 
 }, ... ] 
 ```
 
@@ -82,29 +82,30 @@ Output:
   console.log(`Sorted reports by ${sortBy} (${order}):`, reports); 
 
 
-Output: Sorted reports by created_at (asc): [ { 
-  		id: '605647327', 
-  		payment_id: '169723812', 
-  		shipment_id: '0', 
-  		reconciliation_run_id: '0', 
- 		batch_id: '246471367', 
-        created_at: '2023-02-13 15:56:52', 
-        transaction_type: 'Payment', 
-  		title: 'Credit Card Payment: American Express ending in XXXX', 
-  		amount: '8.08', 
-  		balance: '0.00', 
-  		href: 'https://ship.pirateship.com/reports/receipt?id=169723812' 
+Output: 
+ Sorted reports by created_at (asc): [ { 
+  	id: '605647327', 
+  	payment_id: '169723812', 
+  	shipment_id: '0', 
+  	reconciliation_run_id: '0', 
+ 	batch_id: '246471367', 
+    created_at: '2023-02-13 15:56:52', 
+    transaction_type: 'Payment', 
+  	title: 'Credit Card Payment: American Express ending in XXXX', 
+  	amount: '8.08', 
+  	balance: '0.00', 
+  	href: 'https://ship.pirateship.com/reports/receipt?id=169723812' 
 }, { 
- 		id: '605647610', 
- 		payment_id: '0', 
-  		shipment_id: '322251484', 
-  		reconciliation_run_id: '0', 
- 		batch_id: '246471367', 
- 		created_at: '2023-02-13 15:57:09', 
-  		transaction_type: 'Refund', 
-  		title: 'Jason S: Refund for 1Z2E4A110311087033 to Jason S', 
- 		amount: '8.08', 
-  		balance: '8.08', 
- 		href: 'https://ship.pirateship.com/ship/shipment?id=322251484' 
+ 	id: '605647610', 
+ 	payment_id: '0', 
+  	shipment_id: '322251484', 
+  	reconciliation_run_id: '0', 
+ 	batch_id: '246471367', 
+ 	created_at: '2023-02-13 15:57:09', 
+  	transaction_type: 'Refund', 
+  	title: 'Jason S: Refund for 1Z2E4A110311087033 to Jason S', 
+ 	amount: '8.08', 
+  	balance: '8.08', 
+ 	href: 'https://ship.pirateship.com/ship/shipment?id=322251484' 
 }, ... ] 
 ```
