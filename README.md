@@ -3,29 +3,6 @@
 		A JavaScript class that provides an interface for retrieving and searching a list of reports from the Pirate Ship API.
 		To use this class, create an instance and pass in the necessary cookies for making API requests. The class has several methods for searching the reports and retrieving information about them.
 
-## Available Public Functions
-		getAllReports: returns all the reports.
-		searchByTransactionType: returns the reports that match the specified transaction type.
-		searchByPaymentId: returns the reports that match the specified payment ID.
-		searchByReportId: returns the reports that match the specified report ID.
-		searchByShipmentId: returns the reports that match the specified shipment ID.
-		searchByReconciliationRunId: returns the reports that match the specified reconciliation run ID.
-		searchByBatchId: returns the reports that match the specified batch ID.
-		searchByTitle: returns the reports that match the specified title.
-		searchByAmount: returns the reports that match the specified amount.
-		searchByBalance: returns the reports that match the specified balance.
-		getReportsOnDate: returns the reports that were created on the specified date.
-		getByTimePeriod: returns the reports that were created within the specified time period (in days).
-		getByDateRange: returns the reports that were created within the specified date range.
-		getReportsSorted: returns the reports sorted by the specified field and in the specified order.
-		getTotalCount: returns the total number of reports.
-
-## Installation 
-
-Copy code 
-
-```npm install pirateship-reports```
-
 ## Usage 
 
 ```javascript 
@@ -142,3 +119,19 @@ const psReports = new PirateShipReports(cookies, false);
  	href: 'https://ship.pirateship.com/ship/shipment?id=322251484' 
 }, ...] 
 ```
+## Available Public Functions
+		getAllReports: returns all the reports.
+		searchByTransactionType: returns the reports that match the specified transaction type.
+		searchByPaymentId: returns the reports that match the specified payment ID.
+		searchByReportId: returns the reports that match the specified report ID.
+		searchByShipmentId: returns the reports that match the specified shipment ID.
+		searchByReconciliationRunId: returns the reports that match the specified reconciliation run ID.
+		searchByBatchId: returns the reports that match the specified batch ID.
+		searchByTitle: returns the reports that match the specified title.
+		searchByAmount: returns the reports that match the specified amount.
+		searchByBalance: returns the reports that match the specified balance.
+		getReportsOnDate: returns the reports that were created on the specified date.
+		getByTimePeriod: returns the reports that were created within the specified time period (in days).
+		getByDateRange: returns the reports that were created within the specified date range.
+		getReportsSorted: returns the reports sorted by the specified field and in the specified order.
+		getTotalCount: returns the total number of reports.
